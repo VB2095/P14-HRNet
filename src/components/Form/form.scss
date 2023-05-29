@@ -1,0 +1,63 @@
+label {
+    display: flex;
+    gap: 16px;
+    color: #2F2F2F;
+}
+
+input, select {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #2F2F2F;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #2F2F2F;
+    width: 150px;
+    max-width: 100%;
+    box-sizing:content-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & .submit {
+        align-self: end;
+        transition: 0.3s;
+        border-radius: 8px;
+        border-color: #2F2F2F;
+        &:hover {
+            cursor: pointer;
+            color: #fff;
+            background-color: #2F2F2F;
+        }
+    }
+
+    & fieldset {
+        width: fit-content;
+        legend {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2F2F2F;
+        }
+    }
+}
+
+.personnalInfo_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+
+    .names {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+.workInfo_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}

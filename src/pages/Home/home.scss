@@ -1,0 +1,28 @@
+// .home {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     a {
+//         text-decoration: none;
+//         color: #2F2F2F;
+//     }
+// }
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    min-height: 50vh;
+
+    .homeLink {
+    text-decoration: none;
+    color: #E3E0DD;
+    font-family: 'Hanken Grotesk', sans-serif;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #2F2F2F;
+    }
+}

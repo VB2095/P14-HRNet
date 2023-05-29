@@ -1,0 +1,13 @@
+.banner {
+    margin-bottom: 16px;
+    p {
+        font-family: 'Hanken Grotesk', sans-serif;;
+        color: #2F2F2F;
+        font-size: clamp(2rem, 2vw, 5rem);
+        font-weight: 700;
+        padding: 8px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
