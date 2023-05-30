@@ -3,7 +3,6 @@ import departments from '../../Datas/departments';
 import "./form.scss"
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import FormContext from '../../Hooks/useContext';
 import { submitFormData } from '../../Redux/Actions/formActions';
 import { useEffect } from 'react';
 
@@ -27,7 +26,6 @@ const Form = () => {
     }
   }, [isSubmitSuccessful, reset]);
     return (
-        <FormContext.Provider value={ onSubmit }>
         <form onSubmit={handleSubmit(onSubmit)}>
         <div className='personnalInfo_container'>
           <fieldset>
@@ -136,7 +134,6 @@ const Form = () => {
       
         <input type="submit" className='submit' />
       </form>
-        </FormContext.Provider>
       
     );
 };
