@@ -1,12 +1,16 @@
 import states from '../../Datas/states';
 import departments from '../../Datas/departments';
 import "./form.scss"
+
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { submitFormData } from '../../Redux/Actions/formActions';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+import Modal from 'dialog-modal-react-component'
 
 const Form = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const dispatch = useDispatch();
   const {
     register,
@@ -17,7 +21,7 @@ const Form = () => {
 
   const onSubmit = (data) => {
     dispatch(submitFormData(data));
-    console.log("data:", data);
+    setIsModalOpen(true)
   };
 
   useEffect(() => {
@@ -26,6 +30,7 @@ const Form = () => {
     }
   }, [isSubmitSuccessful, reset]);
     return (
+      <>
         <form onSubmit={handleSubmit(onSubmit)}>
         <div className='personnalInfo_container'>
           <fieldset>
@@ -134,6 +139,10 @@ const Form = () => {
       
         <input type="submit" className='submit' />
       </form>
+      <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
+        <p>Employee Created!</p>
+      </Modal>
+      </>
       
     );
 };

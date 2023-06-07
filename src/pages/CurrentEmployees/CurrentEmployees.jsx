@@ -54,10 +54,6 @@ const columns = [
 export default function CurrentEmployees() {
     const employees = useSelector(state => state.form.employees);
 
-
-
-
-    console.log("Data from all:", employees);
     return (
         <>
         <Banner title="Current Employees" />
